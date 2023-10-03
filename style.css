@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Roboto+Condensed:wght@700&display=swap");
+
+body {
+  background-color: rgb(63, 63, 63);
+  background: linear-gradient(to bottom, #4d4b4b, #3e4c58); /* Replace with your desired gradient */
+  background-image: url('images.jpg'); /* Replace 'your-image-path.jpg' with the actual path to your image */
+  background-size: cover; /* This property makes the image cover the entire background */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Keep the background image fixed while scrolling */
+
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 1.5px;
+  color: #fffefe;
+  margin-bottom: 0.5em;
+}
+
+.converter {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Heebo", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust shadow values */
+}
+
+label {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #f0f0f0;
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-right: 0.5em;
+}
+input {
+margin-bottom: 2em;
+margin-left: 0.5em;
+max-width: 190px;
+height: 30px;
+background-color: #ecf0f1;
+border-radius: 0.5rem;
+padding: 0 1rem;
+border: 2px solid #3498db;
+font-size: 0.6em;
+transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+input:hover,
+input:focus {
+    border-color: #2980b9;
+    background-color: #ecf0f1;
+    box-shadow: 1 1 0.2em rgba(0.5, 0.8, 0.5, 0.8);
+}
+
+.wrapper {
+  margin-inline: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 15em;
+  height: 36px;
+  background-color: #f0f0f0;
+  border: 2px solid black;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 4px 4px #99e3e6;
+}
+
+.scales {
+  width: 118px;
+  height: 28px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.scale_input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.btn {
+  width: 90%;
+  height: 100%;
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scale_input.first:checked + .btn {
+  background-color:#5d9cdc;
+}
+
+#to {
+  display: block;
+  color: #f0f0f0;
+  margin-block: 0.5em;
+  font-family: "Heebo", sans-serif;
+}
+
+.scale_input.second:checked + .btn {
+  background-color: #5d9cdc;
+}
+#convert {
+    background: #72ceaa;
+    color: #fff;
+    padding: 0.6em 3.3em;
+    font-weight: 900;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 2em;
+}
+
+
+#convert:hover {
+    background-color: #204b6f;
+    transform: scale(1.05);
+    box-shadow: 0.15em 0.15em 0.3em rgba(0, 0, 0, 0.2);
+  }
+
+#convert:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+#result {
+    color: #e2eaef; /* Change text color */
+    font-size: 1.2em; /* Adjust font size */
+}
+#conversionResult {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #e74c3c; /* Change color */
+  }
